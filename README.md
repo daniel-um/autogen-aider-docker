@@ -2,7 +2,7 @@
 
 ## How to use
 
-- Requires Python and Docker to be installed.
+- Requires Docker to be installed.
 - If using as-is, you will also need an OpenAI API key (but autogen can be configured to use other models).
 - Optionally, build the docker image yourself:
   - Run `docker build -t autogen-aider .`.
