@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  poc-autogen:
-    image: poc-autogen
+  autogen-aider-docker:
+    image: autogen-aider-docker
     command: /bin/bash
     tty: true
     stdin_open: true
