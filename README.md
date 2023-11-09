@@ -1,4 +1,4 @@
-# poc-autogen
+# autogen-aider-docker
 
 ### How to use
 
