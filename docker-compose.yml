@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  poc-autogen:
+    image: poc-autogen
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+    volumes:
+      - type: bind
+        source: ${MOUNT_SOURCE:-./my-project}
+        target: /app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
