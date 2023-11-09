@@ -1,8 +1,8 @@
 version: '3.8'
 
 services:
-  autogen-aider-docker:
-    image: autogen-aider-docker
+  autogen-aider:
+    image: danum/autogen-aider
     command: /bin/bash
     tty: true
     stdin_open: true
