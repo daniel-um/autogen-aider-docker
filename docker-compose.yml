@@ -3,7 +3,6 @@ version: '3.8'
 services:
   autogen-aider:
     image: danum/autogen-aider
-    command: /bin/bash
     tty: true
     stdin_open: true
     volumes:
@@ -12,4 +11,4 @@ services:
         target: /app
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-
+    command: ["python", "main.py"]
