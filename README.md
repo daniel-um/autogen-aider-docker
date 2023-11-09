@@ -7,7 +7,7 @@
 - Optionally, build the docker image yourself:
   - Run `docker build -t autogen-aider .`.
   - Replace all instances of `danum/autogen-aider` in `docker-compose.yml` with `autogen-aider`.
-- Create `.env` and add OpenAI API key: `OPENAI_API_KEY=my-api-key`.
+- Create `.env` and add OpenAI API key: `echo OPENAI_API_KEY=my-api-key > .env`.
 - Copy `my-project` and rename with your project name: `cp -r my-project my-new-project`.
 - Specify your new project folder as bind-mount source via env var: `export MOUNT_SOURCE=./my-new-project`.
   - Alternatively, simply include `-e MOUNT_SOURCE=./my-new-project` after `docker compose run`, below.
