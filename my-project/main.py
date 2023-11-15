@@ -5,15 +5,17 @@ import os
 # When config_list gets more complicated, should start using OAI_CONFIG_LIST
 #config_list = autogen.config_list_from_json(env_or_file="OAI_CONFIG_LIST")
 
+llm_config = {
+  # "seed": 100,
+  #"config_list": config_list, # A list of OpenAI API configurations
+  "config_list": [{"model": "gpt-4-1106-preview", "api_key": os.environ["OPENAI_API_KEY"]}],
+  "temperature": 0, # Temperature for sampling
+}, # Configuration for autogen's enhanced inference API which is compatible with OpenAI API
+
 # Create the assistant agent
 assistant = autogen.AssistantAgent(
   name="assistant",
-  llm_config={
-    #"cache_seed": 100,
-    #"config_list": config_list, # A list of OpenAI API configurations
-    "config_list": [{"model": "gpt-4-1106-preview", "api_key": os.environ["OPENAI_API_KEY"]}],
-    "temperature": 0, # Temperature for sampling
-  }, # Configuration for autogen's enhanced inference API which is compatible with OpenAI API
+  llm_config=llm_config,
 )
 
 # Create the user proxy agent
